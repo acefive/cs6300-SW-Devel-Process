@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1">
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Report"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/viewReport" android:onClick="viewCustomerInfo" android:visibility="gone"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/cust_name" android:hint="Name"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone|text"
+            android:ems="10"
+            android:id="@+id/phone_number" android:hint="Phone Number"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Birthday"
+            android:id="@+id/textView" android:textAlignment="center" android:gravity="center_horizontal"/>
+    <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/birthday" android:layout_gravity="center_horizontal" android:spinnersShown="true" android:calendarViewShown="false"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card_number" android:layout_gravity="center_horizontal" android:inputType="number"
+            android:hint="Card Number"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/button" android:layout_gravity="center_horizontal" android:onClick="addOrUpdateCustomer"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Customer"
+            android:id="@+id/deleteCustomer" android:layout_gravity="center_horizontal" android:onClick="deleteCustomer"
+            android:visibility="invisible"/>
+</LinearLayout>

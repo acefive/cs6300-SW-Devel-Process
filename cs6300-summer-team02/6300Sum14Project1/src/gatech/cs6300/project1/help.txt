@@ -1,0 +1,13 @@
+----------------------------------------------------
+This program will compute the average number of words per sentence for a specified input file.  
+The format is as follows:
+
+java Main [-l minimumWordLength] [-d listOfdelimiters] file
+	 -l 	 optional    specifies the minimum length of a word in order for it to be considered in the calculation (default is 3)
+	 -d 	 optional    specifies the list of delimiters used to determine the end of a sentence (default is .?;!)
+ 	 -h      optional    Prints help page for instructions on how to use the program
+	 file 	 required    Specifies the file containing the text to calculate the average sentence length
+	 
+The average number of words per sentence in the specified file will be calculated and displayed to the screen.
+----------------------------------------------------
+

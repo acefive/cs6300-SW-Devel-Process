@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.gatech.coffeecartrewards"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="19" />
+
+    <application
+        android:name="com.orm.SugarApp"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="edu.gatech.coffeecartrewards.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="edu.gatech.coffeecartrewards.activities.CustomersList" />
+        <activity android:name="edu.gatech.coffeecartrewards.activities.CustomersAddOrUpdate" />
+        <activity android:name="edu.gatech.coffeecartrewards.activities.PreOrdersList" />
+        <activity android:name="edu.gatech.coffeecartrewards.activities.SalesList" />
+        <activity android:name="edu.gatech.coffeecartrewards.activities.CustomerInfo" />
+        <activity
+            android:name="edu.gatech.coffeecartrewards.activities.PreorderViewByDate"
+            android:label="preorder_view_by_date" />
+        <activity android:name="edu.gatech.coffeecartrewards.activities.SalesViewByDate" />
+        <activity android:name="edu.gatech.coffeecartrewards.activities.SalesViewLineItems" />
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="coffee_cart_rewards.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="13" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DEBUG"
+            android:value="true" />
+
+        <activity
+            android:name="edu.gatech.coffeecartrewards.activities.PurchaseAdd"
+            android:label="@string/title_activity_purchase_add" >
+        </activity>
+        <activity android:name="edu.gatech.coffeecartrewards.activities.PreorderAdd" />
+        <activity android:name="edu.gatech.coffeecartrewards.activities.PreorderAddDate" />
+        <activity
+            android:name="edu.gatech.coffeecartrewards.activities.CustomerManage"
+            android:label="@string/title_activity_customer_manage" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecartrewards.activities.PurchaseHistory"
+            android:label="@string/title_activity_purchase_history" >
+        </activity>
+    </application>
+
+</manifest>

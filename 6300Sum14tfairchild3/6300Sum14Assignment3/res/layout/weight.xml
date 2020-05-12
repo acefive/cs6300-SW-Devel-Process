@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/weightIntro" /> 
+
+        <EditText
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="numberDecimal" 
+            android:text="@string/default_unit">
+
+            <requestFocus />
+        </EditText>
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonreset"
+            android:layout_below="@+id/buttonreset" 
+            android:layout_marginTop="30dp" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/pounds" 
+            android:onClick="handleClick" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kilograms" 
+            android:onClick="handleClick" />
+       
+       </RadioGroup>
+
+        <Button
+            android:id="@+id/return_to_main"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioGroup1"
+            android:layout_below="@+id/radioGroup1"
+            android:layout_marginTop="29dp"
+            android:text="@string/backtomain" />
+
+        <Button
+            android:id="@+id/buttonreset"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text1"
+            android:layout_below="@+id/text1"
+            android:text="@string/reset" />
+
+</RelativeLayout>

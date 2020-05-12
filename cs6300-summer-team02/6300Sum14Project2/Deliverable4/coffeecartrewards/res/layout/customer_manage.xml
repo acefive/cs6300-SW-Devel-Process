@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:weightSum="1" >
+              
+       <Button
+           android:id="@+id/newPurchase"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:onClick="newPurchase"
+           android:text="New Purchase" />
+           
+       <Button
+           android:id="@+id/newPreorder"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="15dp"
+           android:onClick="newPreorder"
+           android:text="New Preorder" />
+
+       <Button
+           android:id="@+id/viewReport"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="15dp"
+           android:onClick="viewCustomerInfo"
+           android:text="View Report" />
+       
+       <Button
+           android:id="@+id/editCustomer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="15dp"
+           android:onClick="editCustomer"
+           android:text="Edit Customer" />
+    
+</LinearLayout>

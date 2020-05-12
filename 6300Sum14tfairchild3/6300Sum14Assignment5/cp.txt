@@ -1,0 +1,47 @@
+# File
+  fileSize:
+	Empty.				[single][property emptyfile]
+	Not empty.
+  Number of occurrences of fromstring in the file:
+	None.				[single][if !emptyfile]  [property no_occurrences]
+	One.				[if !emptyfile]  [property fromstr_one]
+	Many.				[if !emptyfile]  [property fromstr_many]
+  Number of occurrences of fromstring on one line:
+	One.				[if !emptyfile && !no_occurrences && fromstr_one]
+	Many.				[if !emptyfile && !no_occurrences && fromstr_many]
+  Position of the fromstring in the file:
+	First line.			[single][if !emptyfile && !no_occurrences]
+	Last line.			[single][if !emptyfile && !no_occurrences]
+	Any.				[if !emptyfile && !no_occurrences]
+
+# fromstring Pattern
+  Length of the fromstring:
+	Empty.				[error][if !emptyfile && !no_occurrences]  [property empty_fromstr]
+	More than one.			[property fromstr_len_gt1]
+# tostr Pattern
+  Length of the tostring:
+	Empty.				[single][property empty_tostr]
+	One.		
+	More than one.			[property tostr_len_gt1]
+	Longer than the file.
+  Presence of blanks in tostr:
+	None.				
+	One.				[if !empty_tostr] [property tostr_has_blanks]
+	Many.				[if !empty_tostr && tostr_len_gt1]
+  Presence of enclosing quotes in tostr:
+	Enclosed.			[if !empty_tostr && tostr_has_blanks]	[property tostr_in_quotes]
+	Not enclosed.			[single][if !empty_tostr && !tostr_has_blanks]
+	Incorrect.			[error]
+  Presence of quotes in tostr:
+	None.			
+	One.				[if !empty_tostr]
+	Many.				[single][if !empty_tostr && tostr_len_gt1]
+  Presence of escapechar in tostr: 
+	None.				
+	One.				[if !empty_tostr && tostr_len_gt1]  
+	Many.				[single][if !empty_tostr && tostr_len_gt1]
+
+# Filename
+  Presence of a file corresponding to the name:
+ 	Not present.			[error]
+	Present.			[single]

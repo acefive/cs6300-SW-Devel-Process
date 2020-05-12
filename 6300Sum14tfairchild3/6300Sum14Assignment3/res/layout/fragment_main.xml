@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.unitconverter.MainActivity$PlaceholderFragment" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:text="@string/mainIntro" />
+
+    <Button
+        android:id="@+id/gotoWeightActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="31dp"
+        android:text="Pounds/Kilograms" />
+
+    <Button
+        android:id="@+id/gotoTemperatureActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/gotoWeightActivity"
+        android:layout_below="@+id/gotoWeightActivity"
+        android:layout_marginTop="23dp"
+        android:text="Celsius/Fahrenheit" />
+
+    <Button
+        android:id="@+id/gotoDistanceActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gotoTemperatureActivity"
+        android:layout_alignRight="@+id/gotoTemperatureActivity"
+        android:layout_below="@+id/gotoTemperatureActivity"
+        android:layout_marginTop="24dp"
+        android:text="Miles/Kilometers" />
+    
+</RelativeLayout>

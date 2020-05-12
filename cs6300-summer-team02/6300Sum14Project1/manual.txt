@@ -1,0 +1,65 @@
+﻿
+
+
+
+************ Average Sentence Length Calculator *******************
+
+
+This software was written to help you perfect your writing style.  It will calculate the average number of words per sentence that you use in your essays.  This information will help you realize possible grammatical errors and if your writing style can be improved.  For example, if the average number of words per sentence in your essay is 50 or more then you might want to review your use of punctuation.  Maybe you are in the habit of forgetting to end your sentences.  Or maybe your sentences tend to be short and choppy, making it harder for the reader of your essay to follow along.
+
+
+When you use this software you can specify how you want it to run.  
+
+
+1.  If you want to determine for yourself what makes up the end of a sentence then you can specify that with the -d flag.  The -d flag should be immediately followed by the delimiters that you want to use, such as a period (.), a semicolon (;), a question mark (?) or an exclamation point (!).   For example, -d .;?!  
+Note:  this is an optional parameter, defaulting to .;?! if it is not specifed
+
+
+2.  Next, if you want to determine for yourself what minimum word length is used in the calculation then you can specify that with the -L flag, followed directly by the number, or length, of the words you want to consider.  For example, -L 4
+Note:  this is an optional parameter, defaulting to 3 if not specifed
+
+
+3.  Lastly, you will need to tell the software what essay you want to analyze.  This is a required field.  See below for examples on how to run this software:
+
+
+Basic usage for the software:
+java AverageSentenceLength [-l minimumWordLength] [-d listOfdelimiters] filename
+         -l          optional          specifies the minimum length of a word in order for it to be considered in the calculation 
+ (default is 3)
+         -d          optional          specifies the list of delimiters used to determine the end of a sentence 
+ (default is .?;!)
+ 	     -h          optional          Prints help page for instructions on how to use the program
+         file          required          Specifies the file containing the text to calculate the average sentence length
+        
+
+
+
+
+________________
+
+
+
+
+Example:
+java AverageSentenceLength -l 4 -d .?! myEssay.txt
+This example will calculate the average sentence length of myEssay.txt, using .?! to determine the end of a sentence, and only considering words that are 4 characters in length or greater.
+
+
+Output:
+The output of the software will display the options used and then print out the results, as below:
+
+
+java AverageSentenceLength -l 3 -d .;?! essay.txt
+Minimum word length: 3
+Delimiters: .;?!
+File name: essay.txt
+
+
+File: test/inputfiles/essay.txt
+Average sentence length = 10
+
+
+
+
+
+
